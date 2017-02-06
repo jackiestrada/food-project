@@ -1,0 +1,496 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+	<title>Dessert</title>
+	<link rel="stylesheet" type="text/css" href="css/Dessert.css">
+</head>
+
+	<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function() {
+	//
+	$('a.poplight[href^=#]').click(function() {
+	var popID = $(this).attr('rel'); //Get Popup Name
+	var popURL = $(this).attr('href'); //Get Popup href to define size
+	var query= popURL.split('?');
+	var dim= query[1].split('&');
+	var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+	$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
+	var popMargTop = ($('#' + popID).height() + 80) / 2;
+	var popMargLeft = ($('#' + popID).width() + 80) / 2;
+	//Apply Margin to Popup
+	$('#' + popID).css({
+	'margin-top' : -popMargTop,
+	'margin-left' : -popMargLeft
+	});
+	$('body').append('<div id="fade"></div>');
+	$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+	return false;
+	});
+	$('a.close, #fade').live('click', function() {
+	$('#fade , .popup_block').fadeOut(function() {
+	$('#fade, a.close').remove(); //fade them both out
+	});
+	return false;
+	});
+	});
+	</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+<header>For the love of food</header>
+	<div id="nav">
+  			<ul id="topnav">
+    			<li><a href="file:///Users/istudent/Desktop/Jackie%20&%20Ambra%20HOW%20TO./index.html">HOME</a></li>
+    			<li><a href="file:///Users/istudent/Desktop/Jackie%20&%20Ambra%20HOW%20TO./appetizers.html">APPETIZER</a></li>
+    			<li><a href="file:///Users/istudent/Desktop/Jackie%20&%20Ambra%20HOW%20TO./entree.html">ENTREE</a></li>
+    			<li><a href="file:///Users/istudent/Desktop/Jackie%20&%20Ambra%20HOW%20TO./Dessert.html">DESSERT</a></li>
+    			<li><a href="#?w=300" rel="box6" class="poplight">SIGN UP</a></li>
+    			<li><a href="">CONTEST</a></li>
+   			</ul>
+	</div>
+
+	<div id="h1">
+		<h1>Dessert</h1>
+	</div>
+
+	<div id="gallery">
+		
+		<a href="#?w=300" rel="cheesecake" class="poplight"><img src="http://farm5.static.flickr.com/4145/5212948215_dc0ccb2fab.jpg"></a>
+		<a href="#?w=300" rel="strawberryshake" class="poplight"><img src="http://3.bp.blogspot.com/-ssT57S8Hl6I/TzplOE9TUzI/AAAAAAAACk0/czl4c08cYbg/s1600/IMG_0876.JPG"></a>
+		<a href="#?w=300" rel="parfait" class="poplight"><img src="https://static.pexels.com/photos/8382/pexels-photo.jpg"></a>
+		<a href="#?w=300" rel="crepe" class="poplight"><img src="https://i.ytimg.com/vi/UXM4jjiMqAw/maxresdefault.jpg"></a>
+
+	</div>
+
+	<div id="gallery2">
+		
+		<a href="#?w=300" rel="chocoflan" class="poplight"><img src="http://images-gmi-pmc.edge-generalmills.com/cc8f6779-002f-4b9f-b1d2-65c60f301040.jpg"></a>
+		
+		<a href="#?w=300" rel="nutellascone" class="poplight"><img src="http://cdn.skim.gs/image/upload/w_2500,c_fill,dpr_1.0/s7lhjzlb7mz36ck1yrfe"></a>
+		
+		<a href="#?w=300" rel="chocolatestrawberry" class="poplight"><img src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2009/1/13/0/vday_chocolatestraw_4697_s4x3.jpg.rend.sniipadlarge.jpeg"></a>
+		
+		<a href="#?w=300" rel="chocolatepretzel" class="poplight"><img src="http://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/26/85/54/picF850a8.jpg"></a>
+
+	</div>
+
+
+	<div id="gallery3">
+			
+			<a href="#?w=300" rel="oreosundae" class="poplight"><img src="http://del.h-cdn.co/assets/15/30/980x653/shot-2_69.jpg"></a>
+			<a href="#?w=300" rel="chocostrawcake" class="poplight"><img src="http://images-gmi-pmc.edge-generalmills.com/6628197f-1322-4e1a-8d58-3b1fbd1522f8.jpg"></a>
+			<a href="#?w=300" rel="chocostrawcreamcake" class="poplight"><img src="http://images-gmi-pmc.edge-generalmills.com/8b4f413a-c4f0-4d64-bc91-8555d96956eb.jpg"></a>
+			<a href="#?w=300" rel="ricepudding" class="poplight"><img src="http://www.recetaarrozconleche.com/ImagenesRecetaArrozConLeche/ImagenesRecetaArrozConLeche/receta-arroz-leche-miel.jpg"></a>
+
+	</div>
+
+<div id="cheesecake" class="popup_block" style="overflow: scroll; height: 600px;">
+<h1>Triple Chocolate Cheesecake</h1>
+<p>INGREDIENTS</p>
+<ul>
+	<li>1 1/2 Cups of Chocolate Cookie Crumbs</li>
+	<li>1/3 Cup of Melted Butter</li>
+	<li>Four 8-ounce packages of room temperatured cream cheese</li>
+	<li>2 1/2 tablespoons of all-purpose flour</li>
+	<li>1/4 teaspoons of kosher salt</li>
+	<li>4 regular size eggs</li>
+	<li>1 1/2 cups of sugar</li>
+	<li>7-ounces of melted semi-sweet chocolate</li>
+	<li>1/4 cups of milk</li>
+	<li>1 cup of semisweet chocolate chips</li>
+	<li>1/3 Cup of Kahlua (Mexican coffee-flavoured liqueur)</li>
+	<li>1/3 Cup of light corn syrup</li>
+	<li>1 Cup of semisweet chocolate chips</li>
+<p id="p2">STEPS</p>
+<ol>
+	<li>Preheat the oven to 475 degrees</li>
+	<li>For the crust: Combined the cookie crumbs and butter into a bowl</li>
+	<li>Next pour the combined crust into a 9-inch springform pan, press and mold</li>
+	<li>For the filling: Beat the cream cheese until it's smooth, then add in the flour and salt</li>
+	<li>Gradually add in the sugar while beating the batter</li>
+	<li>Add in the eggs one at a time, beating after each addition.</li>
+	<li>Stir in the melted chocolate, milk, and chocolate chips.</li>
+	<li>Pour the mixture into the crust and bake it inside the 475 degree oven for 10 to 12 minutes
+	<li>Reduce the heat to 300 degrees and ba<li>ke 40-50 minutes longer, or at least until the filling is barely set in the center</li>
+	<li>Remove it from the oven and set it to cool for at least an hour</li>
+	<li>Refrigerate it severasl hours or overnight</li>
+	<li>When it's ready, serve it with chocolate chips and a kahlua chocolate sauce</li>
+
+</ol>
+</div>
+
+</div></div></div></div></div></div></div></div></div></div>
+<div id="strawberryshake" class="popup_block" style="overflow: scroll; height: 600px;">
+<h1>Chocolate Covered Strawberry Milkshake</h1>
+<p>INGREDIENTS</p>
+<ul>
+	<li>3 1/2 cups strawberries, cut up</li>
+    <li>2 cups of softish vanilla ice cream</li>
+	<li>1/4 cup butter</li>
+	<li>1/2 cup milk chocolate chips or two bars of Hersheys chocolate</li>
+	<li>/4 cup cocoa powder</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+	<li>Melt the butter in the microwave until it's bubbly and leaves pop stains on the door</li>
+	<li>Stir the chocolate chips or Hershey squares until it's melted</li>
+	<li>Add in the cocoa powder and stir until it's smooth</li>
+	<li>After blending the chopped strawberries and ice cream pour into a cup</li>
+	<li>Pour in the hot fudge until it overflows</li>
+	</ol>
+
+</div>
+
+</div></div></div></div></div></div></div></div></div></div>
+<div id="parfait" class="popup_block" style="overflow: scroll; height: 600px;">
+<h1>Strawberry Parfait</h1>
+<p>INGREDIENTS</p>
+<ul>
+	<li>12 graham crackers (6.5 ounces.), crumbled</li>
+	<li>6 tablespoons butter, melted</li>
+	<li>1 1/4 cups powdered sugar</li>
+	<li>2 cups heavy whipping cream</li>
+	<li>1 pound strawberries</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+	<li>Rinse and dry the strawberries before cutting off the leafy tops</li>
+	<li>Dice the fruits in half before thinly slicing them</li>
+	<li>Combined the diced strawberries with 2 tablespoons of sugar and let it simmer in its sweet juices while cooking it over an open flame</li>
+	<li>For the crumb mixture, combine the graham crackers, butter, and 2 tablespoons of sugar until it's crumbly. Allow it to chill until it's ready to use.</li>
+	<li>For the whipped topping, use either a whisker or a hand mixer to beat the heavy whipping cream with the remaining sugar for taste--do this until stiff peaks form.</li>
+	<li>Assembling the treats, fold half the whipped topping into the macerated strawberries. Divide the strawberry topping, whipped topping, strawberries (reserve some for garnish) and crumb mixture in even layers between the 6 parfait dishes. Top with the remaining strawberries. Chill in the refrigerator for at least 1 hour minutes or until ready to eat.</li>
+	</ol>
+</div>
+
+</div></div></div></div></div></div></div></div></div></div>
+<div id="crepe" class="popup_block" style="overflow: scroll; height: 600px;">
+<h1>Strawberry Banana Crepes</h1>
+<p>INGREDIENTS</p>
+<ul>
+	<li>1 cup all-purpose flour</li>
+	<li>1 tablespoon sugar</li>
+	<li>1/2 teaspoon ground cinnamon</li>
+	<li>1-1/2 cups milk</li>
+	<li>2 large eggs</li>
+	<li>1 to 2 tablespoons butter</li>
+	<li>1 package (8 ounces) cream cheese, softened</li>
+	<li>1 carton (8 ounces) frozen whipped topping, thawed</li>
+	<li>1/2 cup confectioners' sugar</li>
+	<li>2 cups sliced fresh strawberries</li>
+	<li>2 medium firm bananas, sliced</li>
+	<li>1/4 cup sugar, optional</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+	<li>In a large bowl, combine the flour, sugar, cinnamon, milk and eggs. Cover and refrigerate for 1 hour.</li>
+	<li>In an 8-in. nonstick skillet, melt 1 teaspoon butter. Stir batter; pour about 2 tablespoons into the center of skillet. Lift and tilt pan to evenly coat bottom. Cook until top appears dry; turn and cook 15-20 seconds longer. Remove to a wire rack.</li>
+	<li>Repeat with remaining batter, add butter to a skillet as needed. When cool, stack crepes on paper towels with waxed paper in between.</li>
+	<li>In a large bowl, beat the filling ingredients until smooth. Spread 2 rounded tablespoonfuls on each crepe; roll up. In a large bowl, combine topping ingredients; spoon with crepes. Yield: 18 crepes.</li>
+	</ol>	
+</div>
+
+</div></div></div></div></div></div></div></div></div></div>
+<div id="chocoflan" class="popup_block" style="overflow: scroll; height: 600px;">
+<h1>Chocoflan</h1>
+<p>INGREDIENTS</p>
+<ul>
+	<li>12 -cup capacity Bundt pan</li>
+	<li>Softened butter, to coat pan</li>
+	<li>1/4 cup cajeta or caramel sauce</li>
+	<li>10 tablespoons butter, room temperature</li>
+	<li>1 cup sugar</li>
+	<li>1 egg, room temperature</li>
+	<li>1 3/4 cups all-purpose flour</li>
+	<li>3/4 teaspoon baking powder</li>
+	<li>3/4 teaspoon baking soda</li>
+	<li>1/3 cup cocoa powder</li>
+	<li>1 1/4 cups buttermilk</li>
+	<li>1/4 cup cajeta or caramel sauce</li>
+	<li>1/4 cup chopped pecans</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+	<li>Put an oven rack in the middle of the oven and preheat to 350 degrees F.</li>
+	<li>Coat a Bundt pan with a little butter, then coat the bottom with 1/4 cup cajeta and put it in a large roasting pan. (The roasting pan will serve as a water bath during baking.)</li>
+	<li>For the cake: Add the butter and sugar to a bowl and using an electric hand mixer or stand mixer, beat until light and fluffy, then beat in the egg. </li>
+	<li>Sift together the flour, baking powder, baking soda and cocoa in a medium bowl. </li>
+	<li>Beat 1/3 of the flour mixture, and 1/2 of the buttermilk into the egg mixture. </li>
+	<li>Repeat, ending with the flour mixture. Blend until well incorporated.</li>
+	For the flan: In a blender, combine the evaporated milk, condensed milk, cream cheese, eggs and vanilla. </li>
+	<li>Blend on high for 30 seconds.</li>
+	<li>Scoop the cake batter into the prepared Bundt pan and spreading evenly. </li>
+	<li>Slowly pour the flan mixture over the cake batter. Cover with foil and add about 1-inch of hot water to the roasting pan.</li>
+	<li>Carefully slide the pan into the oven, and bake 1 hour, until the surface of the cake is firm to the touch, or an inserted toothpick comes out clean. </li>
+	<li>When cake is done, remove from the water bath and cool completely to room temperature, about 1 hour.</li>
+	<li>Invert a large, rimmed serving platter over the Bundt pan, grasp tightly together, jiggle a little and flip over. </li>
+	<li>Remove the pan and scrape any remaining cajeta from the pan onto the cake, garnish with chopped pecans and serve!</li>
+
+	</ol>
+</ul>	
+</div>
+
+</div></div></div></div></div></div></div></div></div></div>
+<div id="nutellascone" class="popup_block" style="overflow: scroll; height: 600px;">
+<h1>Giant Slow Cooker Nutella Scone</h1>
+<p>INGREDIENTS</p>
+<ul>
+	<li>200 g plain flour I used golden whole grain</li>
+	<li>3 tsp baking powder</li>
+	<li>25 g cocoa powder</li>
+	<li>1 pinch of salt</li>
+	<li>55 g butter</li>
+	<li>30 g caster sugar</li>
+	<li>100 g Nutella</li>
+	<li>150 ml semi-skimmed milk</li>
+	<li>Nutella and whipped cream to serve</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+	<li>Place the flour, baking powder, cocoa powder and salt in a large bowl.</li>
+	<li>Rub the butter into the dry ingredients.</li>
+	<li>Place the Nutella into a small bowl and heat gently in the microwave until it is thinner and more runny.</li>
+	<li>Stir the caster sugar into the main mixture, then add the milk and the Nutella and make a soft dough.</li>
+	<li>Grease your slow cooker pot lightly and place a large cake case in it or line it with baking paper. </li>
+	<li>Double the layers to prevent the scone burning.</li>
+	<li>Spoon the mixture into the lined pot.</li>
+	<li>Place a tea towel under the lid and put the lid back on, and cook on high for 1.5 hrs or until firm.</li>
+	<li>Allow to cool, drizzle with more warmed Nutella and serve with whipped cream. Eat on the day you make it.</li>
+
+</ol>
+</div>
+
+</div></div></div></div></div></div></div></div></div></div>
+<div id="chocolatestrawberry" class="popup_block" style="overflow: scroll; height: 600px;">
+<h1>Chocolate Covered Strawberries</h1>
+<p>INGREDIENTS</p>
+<ul>
+	<li>6 ounces semisweet chocolate, chopped</li>
+	<li>3 ounces white chocolate, chopped</li>
+	<li>1 pound strawberries with stems (about 20), washed and dried very well</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+	<li>Put the semisweet and white chocolates into 2 separate heatproof medium bowls. </li>
+	<li>Fill 2 medium saucepans with a couple inches of water and bring to a simmer over medium heat.</li>
+	<li>Turn off the heat; set the bowls of chocolate over the water to melt. </li>
+	<li>Stir until smooth. </li>
+	<li>(Alternatively, melt the chocolates in a microwave at half power, for 1 minute, stir and then heat for another minute or until melted.)</li>
+	<li>Once the chocolates are melted and smooth, remove from the heat. </li>
+	<li>Line a sheet pan with parchment or waxed paper. </li>
+	<li>Holding the strawberry by the stem, dip the fruit into the dark chocolate, lift and twist slightly, letting any excess chocolate fall back into the bowl. </li>
+	<li>Set strawberries on the parchment paper. </li>
+	<li>Repeat with the rest of the strawberries. </li>
+	<li>Dip a fork in the white chocolate and drizzle the white chocolate over the dipped strawberries.</li>
+	<li>Set the strawberries aside until the chocolate sets, about 30 minutes.</li>
+
+
+</ol>
+</div>
+
+</div></div></div></div></div></div></div></div></div></div>
+<div id="chocolatepretzel" class="popup_block" style="overflow: scroll; height: 600px;">
+<h1>Chocolate Covered Pretzels</h1>
+<p>INGREDIENTS</p>
+<ul>
+	<li>8 ounces semisweet chocolate</li>
+	<li>2 teaspoons vegetable shortening</li>
+	<li>17 large pretzels (can use regular size pretzels)</li>
+	<li>6 -7 o<li>unces white chocolate</li>
+
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+	<li>Cover a baking sheet with waxed paper.</li>
+	<li>In a double broiler set over simmering water, melt the semisweet chocolate with 2 teaspoons shortening, stirring gently constantly; remove from heat.</li>
+	<li>Using tongs dip each pretzel in chocolate allowing excess to drip off.</li>
+	<li>Place onto waxed paper (if the chocolate in the pot begins to harden then reheat slightly).</li>
+	<li>If you are sprinkling any toppings on do it right after dipping into the chocolate so it will stick.</li>
+	<li>Place the coated pretzels in the refrigerator to harden.</li>
+	<li>After the pretzels have hardened place the white chocolate in a double boiler and melt over simmering water (or you could melted in the microwave).</li>
+	<li>Drizzle the white chocolate in small strands over each pretzel.</li>
+	<li>Return to waxed paper and refrigerate.</li>
+
+
+</ol>
+</div>
+
+</div></div></div></div></div></div></div></div></div></div>
+<div id="oreosundae" class="popup_block" style="overflow: scroll; height: 600px;">
+<h1>Easy-Peasy Oreo Sundae</h1>
+<p>INGREDIENTS</p>
+<ul>
+	<li>4 scoops cookies and cream ice cream</li>
+	<li>2 c. chocolate chips</li>
+	<li>8 Oreo cookies (either large chopped, or minis)</li>
+	<li>whipped cream</li>
+	<li>Oreo cookie crumbs for garnish</li>
+</ul>
+
+<p id="p2">STEPS</p>
+<ol>
+	<li>Scoop ice cream into sundae glasses. </li>
+	<li>Top with chocolate chips and Oreo cookie pieces.</li>
+	<li>Finish the sundae with whipped cream.</li>
+	<li>Cover the entire sundae with a dusting of Oreo crumbs.</li>
+</ol>
+</div>
+
+</div></div></div></div></div></div></div></div></div></div>
+<div id="chocostrawcake" class="popup_block" style="overflow: scroll; height: 600px;">
+<h1>Betty Crocker Chocolate Strawberry Cake with Fluffy Frosting</h1>
+<p>INGREDIENTS</p>
+<ul>
+	<li>1 box Betty Crocker™ SuperMoist™ milk chocolate cake mix</li>
+	<li>3/4 cup water</li>
+	<li>1/3 cup vegetable oil</li>
+	<li>3 eggs</li>
+	<li>1 container (6 oz) Greek Fat Free strawberry yogurt</li>
+	<li>1 container Betty Crocker™ Whipped fluffy white frosting</li>
+	<li>3/4 cup Cool Whip™ lite frozen whipped topping, thawed</li>
+	<li>10 fresh strawberries</li>
+	<li>2 tablespoons miniature semisweet chocolate chips</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+	<li>Heat oven to 350°F (325°F for dark or nonstick pans). </li>
+	<li>Generously grease or spray two 8- or 9-inch round cake pans. </li>
+	<li>In large bowl, beat cake ingredients with electric mixer on low speed 30 seconds, then on medium speed 2 minutes. </li>
+	<li>Pour into pans.</li>
+	<li>Bake as directed on box for 8- or 9-inch rounds. </li>
+	<li>Cool 10 minutes. </li>
+	<li>Run knife around sides of pans to loosen cakes; remove from pans to cooling rack. </li>
+	<li>Cool completely, about 30 minutes.</li>
+	<li>In medium bowl, add frosting; fold in whipped topping.</li>
+	<li>On serving plate, place 1 cake, rounded side down. </li>
+	<li>Spread with 1/3 cup frosting almost to edge. </li>
+	<li>Cut about 5 strawberries into 1/4-inch slices; arrange on frosted cake. </li>
+	<li>Top with second cake, rounded side up. </li>
+	<li>Frost side and top of cake with remaining frosting. </li>
+	<li>Garnish with about 5 halved strawberries in center of cake. </li>
+	<li>Sprinkle chocolate chips around outside edge of top of cake. </li>
+	<li>Store loosely covered in refrigerator.</li>
+
+</ol>
+</div>
+
+</div></div></div></div></div></div></div></div></div></div>
+<div id="chocostrawcreamcake" class="popup_block" style="overflow: scroll; height: 600px;">
+<h1>Betty Crocker Chocolate Strawberry Cake with Fluffy Frosting</h1>
+<p>INGREDIENTS</p>
+<ul>
+	<li>1/2 box Betty Crocker™ SuperMoist™ butter recipe yellow cake mix (about 1 2/3 cups)</li>
+	<li>1/2 cup water</li>
+	<li>3 tablespoons butter, softened</li>
+	<li>1/2 teaspoon almond extract</li>
+	<li>1 egg</li>
+	<li>8 oz white chocolate baking bars or squares, chopped</li>
+	<li>2 tablespoons butter, cut into pieces, softened</li>
+	<li>2/3 cup whipping cream</li>
+	<li>2 cups fresh whole strawberries, thinly sliced</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+	<li>Heat oven to 350°F (325°F for dark or nonstick pan). </li>
+	<li>Generously spray bottom and side of 8- or 9-inch round cake pan with baking spray with flour.</li>
+	<li>In large bowl, beat cake mix, water, 3 tablespoons butter, the almond extract and egg with electric mixer on low speed until moistened, then on medium speed 2 minutes, scraping bowl occasionally. </li>
+	<li>Pour into pan.</li>
+	<li>Bake as directed on box for 8- or 9-inch rounds. </li>
+	<li>Cool in pan 10 minutes. </li>
+	<li>Remove from pan to cooling rack. </li>
+	<li>Cool completely, about 1 hour.</li>
+	<li>Meanwhile, place white chocolate and 2 tablespoons butter in medium metal bowl. </li>
+	<li>In 1-quart saucepan, heat whipping cream over medium heat just to boiling. </li>
+	<li>Immediately pour hot cream over white chocolate and butter. </li>
+	<li>Let stand about 5 minutes or until mixture is melted and smooth when stirred. </li>
+	<li>Let stand until room temperature, about 1 hour.</li>
+	<li>Beat cooled white chocolate mixture on high speed until fluffy.</li>
+	<li>Cut cake horizontally in half, using long, sharp knife. </li>
+	<li>On serving plate, place 1 layer, cut side up. </li>
+	<li>Spread with 1/2 of the filling; top with 1/2 of the strawberries. </li>
+	<li>Add remaining cake layer, cut side down. </li>
+	<li>Spread remaining filling over top of cake; top with remaining strawberries. </li>
+	<li>Store covered in refrigerator.</li>
+
+</ol>
+</div>
+
+</div></div></div></div></div></div></div></div></div></div>
+<div id="ricepudding" class="popup_block" style="overflow: scroll; height: 600px;">
+
+<h1>Rice Pudding</h1>
+<p>INGREDIENTS</p>
+<ul>
+	<li>2 1/2 cups (600 ml) of whole milk</li>
+	<li>1/3 cup (66 grams) of uncooked short grain white rice</li>
+	<li>Pinch of salt</li>
+	<li>1 egg</li>
+	<li>1/4 cup (50 grams) dark brown sugar</li>
+	<li>1 teaspoon of vanilla extract</li>
+	<li>1/4 teaspoon of cinnamon</li>
+	<li>1/3 cup (40 grams) raisins</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+	<li>In a medium-sized, heavy-bottomed saucepan, bring the milk, rice and salt to a boil over high heat. </li>
+	<li>Reduce heat to low and simmer until the rice is tender, about 20-25 minutes. </li>
+	<li>Stir frequently to prevent the rice from sticking to the bottom of the pan.</li>
+	<li>2 In a small mixing bowl, whisk together egg and brown sugar until well mixed. </li>
+	<li>Add a half cup of the hot rice mixture to the egg mixture, a tablespoon at a time, vigorously whisking to incorporate.</li>
+
+
+</ol>
+
+</div>
+
+
+
+		<div id="box6" class="popup_block">
+<h3>SIGN UP</h3>
+  <div id="space">
+   <form actions="" style="line-height: 120%;">
+        Firstname:
+        <input type="text" name="firstname">
+        <br>
+        <br>
+        Lastname:
+        <input type="text" name="Lastname">
+        <br>
+        <br>
+        </form>
+        <form actions="">
+        Email:
+        <input type="email" id="myEmail" value="xyz_123@example.com"> 
+        <br>
+        <br>
+        </form>
+        <form>    
+        D.O.B:
+        <input type="D.O.B" id="DOB" value="03/20/1942">
+        <br>
+        <br>
+        </form>
+        <form>
+        Password:
+        <input type="Password" id="mypsw" value="psw123">
+        <br>
+        <br>
+        </form>
+        <form>
+          Username:
+          <input type="Username" id="UN" value="example_123">
+        </form>
+        <form>
+        <br>
+        <br>
+        <input type="submit" name="submit" style="background-color: #f44e42; color: white">
+        </form>
+  </div>
+
+</div></div></div></div></div></div></div></div></div></div>
+
+</body>
+</html>

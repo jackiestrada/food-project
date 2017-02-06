@@ -1,0 +1,412 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+	<title>Entree</title>
+	<link rel="stylesheet" type="text/css" href="css/entree.css">
+</head>
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+//
+$('a.poplight[href^=#]').click(function() {
+var popID = $(this).attr('rel'); //Get Popup Name
+var popURL = $(this).attr('href'); //Get Popup href to define size
+var query= popURL.split('?');
+var dim= query[1].split('&');
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2;
+var popMargLeft = ($('#' + popID).width() + 80) / 2;
+//Apply Margin to Popup
+$('#' + popID).css({
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft
+});
+$('body').append('<div id="fade"></div>');
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+return false;
+});
+$('a.close, #fade').live('click', function() {
+$('#fade , .popup_block').fadeOut(function() {
+$('#fade, a.close').remove(); //fade them both out
+});
+return false;  
+});
+});
+</script>
+<meta name="viewport" content="width=device-width, inital-scale=1.0">
+<body>
+	<header>For the love of food</header>
+	<div id="nav">
+  			<ul id="topnav">
+    			<li><a href="file:///Users/istudent/Desktop/Jackie%20&%20Ambra%20HOW%20TO./index.html">HOME</a></li>
+    			<li><a href="file:///Users/istudent/Desktop/Jackie%20&%20Ambra%20HOW%20TO./appetizers.html">APPETIZER</a></li>
+    			<li><a href="file:///Users/istudent/Desktop/Jackie%20&%20Ambra%20HOW%20TO./entree.html">ENTREE</a></li>
+    			<li><a href="file:///Users/istudent/Desktop/Jackie%20&%20Ambra%20HOW%20TO./Dessert.html">DESSERT</a></li>
+    			<li><a href="#?w=300" rel="box1" class="poplight">SIGN UP</a></li>
+    			<li><a href="">CONTEST</a></li>
+   			</ul>
+	</div>
+
+	<div id="h1">
+		<h1>Entree</h1>
+	</div>
+
+    <div id="gallery">
+        
+        <a href="#?w=300" rel="box5" class="poplight"><img src="http://cf.createdby-diane.com/wp-content/uploads/2012/02/Baked-Ziti1-530x353.jpg"></a>
+        <a href="#?w=300" rel="box2" class="poplight"><img src="http://www.thatsquareplate.com/wp-content/uploads/2015/12/Enchiladas-Verdes-5.jpg"></a>
+        <a href="#?w=300" rel="box3" class="poplight"><img src="https://www.lobstergram.com/media/wysiwyg/lobster-tails.jpg"></a>
+        <a href="#?w=300" rel="box4" class="poplight"><img src="http://cateringbymopsie.com/wp-content/uploads/2015/07/smoked-salmon-entree.jpg"></a>
+
+    </div>
+
+    <div id="gallery2">
+        
+        <a href="#?w=300" rel="box6" class="poplight"><img src="http://footage.framepool.com/shotimg/qf/658159364-sesame-bun-hamburger-french-fries-main-course.jpg"></a>
+        <a href="#?w=300" rel="box7" class="poplight"><img src="http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_720/images/live/p0/35/v5/p035v5p8.jpg"></a>
+        <a href="#?w=300" rel="box8" class="poplight"><img src="http://www.wholefoodsmarket.com/sites/default/files/styles/header_recipe/public/media/2005-1_0.jpg?itok=DeV_EvWB"></a>
+        <a href="#?w=300" rel="box9" class="poplight"><img src="http://www.comidamexicana.com/libraries/forms/2/imagesfiles/20140211102449_470x340.jpg"></a>
+
+    </div>
+
+
+    <div id="gallery3">
+            
+            <a href="#?w=300" rel="box10" class="poplight"><img src="http://assets.bonappetit.com/photos/57ae45a253e63daf11a4e4a9/master/w_1200,c_limit/squash-and-broccoli-rabe-lasagna.jpg"></a>
+            <a href="#?w=300" rel="box11" class="poplight"><img src="http://www.blissfullydelicious.com/wp-content/uploads/2011/10/pumpkin-mac-n-cheese-2-1024x778.jpg"></a>
+            <a href="#?w=300" rel="box12" class="poplight"><img src="http://www.johnsonville.com/recipe/italian-sausage-and-quinoa-stuffed-peppers/image/Italian_Sausage_and_Quinoa_Stuffed_Pepper-.jpg">
+            <a href="#?w=300" rel="box13" class="poplight"><img src="https://lh3.googleusercontent.com/fCTNFlFWyT9kIjPkDcuu4QPhfUUYQqDDvK3AyN3XqUOb606SqVZgo5SE-a41XgyVbAsivAaU-VjQce7AoYssOxhx42cO=s535-c">
+
+    </div>
+
+<div id="box5" class="popup_block">
+<h3>BAKED ZITI</h3>
+<p>INGREDIENTS</p>
+<ul>
+    <li>1 pound dry ziti pasta</li>
+    <li>1 onion, chopped</li>
+    <li>1 pound lean ground beef</li>
+    <li>2 (26 ounce) jars spaghetti sauce</li>
+    <li>6 ounces provolone cheese, sliced</li>
+    <li>1 1/2 cups sour cream</li>
+    <li>6 ounces mozzarella cheese, shredded</li>
+    <li>2 tablespoons grated Parmesan cheese</li>
+</ul>
+<p id="p2">STEPS</p>
+    <ol>
+        <li>Bring a large pot of lightly salted water to a boil. Add ziti pasta, and cook until al dente, about 8 minutes; drain</li>
+        <li>In a large skillet, brown onion and ground beef over medium heat. Add spaghetti sauce, and simmer 15 minutes</li>
+        <li>Preheat the oven to 350 degrees F (175 degrees C). Butter a 9x13 inch baking dish. Layer as follows: 1/2 of the ziti, Provolone cheese, sour cream, 1/2 sauce mixture, remaining ziti, mozzarella cheese and remaining sauce mixture. Top with grated Parmesan cheese</li>
+        <li>Bake for 30 minutes in the preheated oven, or until cheeses are melted</li>
+    </ol>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box2" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>zENCHILADAS VERDES</h3>
+<p>INGREDIENTS</p>
+<ul>
+    <li>2 1/2 cups shredded Double-Herb Roasted Chicken (about 12 ounces)</li>
+    <li>1/2 cup shreded cheese( any cheese you like)</li>
+    <li>1/3 cup finely chopped onion</li>
+    <li>1/3 cup fat-free, less-sodium chicken broth</li>
+    <li>1/3 cup fat-free sour cream</li>
+    <li>1 tablespoon fresh lime juice</li>
+    <li>1/2 teaspoon ground cumin</li>
+    <li>1/4 teaspoon salt</li>
+    <li>1/8 teaspoon black pepper</li>
+    <li>8 (6-inch) corn tortillas</li>
+    <li>1/4 cup fat-free sour cream</li>
+    <li>Sliced jalapeno pepper</li>
+    <li>1 pound tomatillos (about 15</li>
+    <li>1 1/4 cups fat-free, less-sodium chicken broth</li>
+    <li>1/4 teaspoon salt</li>
+    <li>1 jalapeno pepper, seeded and chopped</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+    <li>To prepare enchilada filling, combine chicken and next 9 ingredients (chicken through black pepper) in a large bowl.Spread 1/2 cup salsa verde in bottom of a 13 by 9-inch baking dish coated with cooking spray. Warm tortillas according to package directions. Spoon about 1/3 cup chicken mixture down center of each tortilla; roll up. Arrange enchiladas, seam sides down, crosswise in dish. Pour remaining salsa verde evenly over enchiladas. Cover and bake at 400 degrees for 10 minutes or until thoroughly heated. Serve with sour cream, and garnish with sliced jalapeno, if desired</li>
+    <li>To prepare salsa verde, discard husks and stems from tomatillos; cut into quarters. Combine tomatillos, 11/4 cups broth, 1/4 teaspoon salt, and chopped jalapeno in a saucepan over medium heat. Bring to a boil; reduce heat, and simmer 15 minutes or until tomatillos are tender. Cool slightly. Place salsa verde in a blender or food processor, and process until smooth or mash with a potato masher. Place a large nonstick skillet over medium-high heat until hot. Add salsa verde; cook until reduced to 2 cups (about 1 minute)</li>
+</ol>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box3" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>LOBSTER TAILS</h3>
+<p>INGREDIENTS</p>
+<ul>
+    <li>2 whole lobster tails</li>
+    <li>1/2 cup butter, melted</li>
+    <li>1/2 teaspoon ground paprika</li>
+    <li>salt to taste</li>
+    <li>ground white pepper, to taste</li>
+    <li>1 lemon - cut into wedges, for garnish</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+    <li>Preheat the broiler.</li>
+    <li>Place lobster tails on a baking sheet. With a sharp knife or kitchen shears, carefully cut top side of lobster shells lengthwise. Pull apart shells slightly, and season meat with equal amounts butter, paprika, salt, and white peppe</li>
+    <li>Broil lobster tails until lightly browned and lobster meat is opaque, about 5 to 10 minutes. Garnish with lemon wedges to serve</li>
+</ol>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box4" class="popup_block">
+<h3>GRILLED SALMON</h3>
+<p>INGREDIENTES</p>
+<ul>
+    <li>1 1/2 pounds salmon fillets</li>
+    <li>lemon pepper to taste</li>
+    <li>garlic powder to taste</li>
+    <li>salt to taste</li>
+    <li>1/4 cup vegetable oil</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+    <li>Season salmon fillets with lemon pepper, garlic powder, and salt.</li>
+    <li>Preheat grill for medium heat.</li>
+    <li>Lightly oil grill grate. Place salmon on the preheated grill, and discard marinade. Cook salmon for 6 to 8 minutes per side, or until the fish flakes easily with a fork.</li>
+</ol>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box6" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>HAMBURGER</h3>
+<p>INGREDIENTES</p>
+<ul>
+    <li>1 egg</li>
+    <li>1 teaspoon mustard (regular or Dijon)</li>
+    <li>1 teaspoon Worcestershire sauce</li>
+    <li>1 small onion, finely grated</li>
+    <li>1 clove garlic, minced</li>
+    <li>1⁄2 teaspoon salt</li>
+    <li>1⁄2 teaspoon pepper</li>
+    <li>1 lb medium ground beef</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+    <li>Lightly oil grill heat BBQ to medium.</li>
+    <li>Whisk egg in a bowl add next 6 ingredients</li>
+    <li>Crumble in beef using your hands or a fork, gently mix together.</li>
+    <li>Handle the meat as little as possible – the more you work it, the tougher it gets.</li>
+    <li>Gently shape (don't firmly press) mixture into burgers</li>
+    <li>Using your thumb, make a shallow depression in the centre of each burger to prevent puffing up during cooking.</li>
+    <li>Place burgers on the grill, close lid BBQ until NO LONGER PINK INSIDE, turning once, about 6 - 8 minutes per side.</li>
+    <li>An instant read thermometer should read 160F.</li>
+    <li>Don't abuse your burgers by pressing with a spatula, pricking with a fork or turning frequently as precious juices will be lost!</li>
+    <li>Tuck into a warm crusty bun add your favourite toppings.</li>
+</ol>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box7" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>TACOS</h3>
+<p>INGREDINETES</p>
+<ul>
+    <li>1 cup pineapple juice</li>
+    <li>1/4 cup vegetable oil, plus more for cooking.</li>
+    <li>One 1-ounce package achiote paste.</li>
+    <li>1 tablespoon adobo sauce.</li>
+    <li>4 chipotles in adobo sauce.</li>
+    <li>1 clove garlic.</li>
+    <li>Pinch kosher salt.</li>
+    <li>2 pounds boneless pork butt, sliced into 1/2-inch-thick slices, then into 1/2-inch-wide strips.</li>
+    <li>12 fresh 6-inch white corn tortillas</li>
+    <li>1 yellow onion, 1/4-inch dice</li>
+    <li>1 fresh pineapple, peeled, cored, 1/2-inch dice</li>
+    <li>1/4 cup fresh cilantro leaves</li>
+    <li>Salsa, for serving</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+    <li>Puree 3/4 cup of the pineapple juice, the vegetable oil, achiote paste, adobo sauce, chipotles, garlic and salt in a food processor. Mix the pineapple juice mixture with the pork in a freezer bag and move around to coat. Marinate the pork in the fridge, 1 to 2 hours</li>
+    <li>Preheat a cast-iron skillet or grill to medium-high heat. Lightly oil the skillet and add the tortillas, toasting, about 30 seconds per side. Remove the tortillas and store in a towel to keep warm</li>
+    <li>Raise the heat under the skillet to high and add 1 tablespoon vegetable oil. Remove the pork from the bag and wipe off any excess pineapple juice mixture. Cook the pork in batches, until charred and cooked through</li>
+    <li>Remove the pork from the skillet. Chop the meat into bite-size pieces. Add half of the onions and the fresh pineapple and quickly cook until lightly browned, about 2 minutes. Add the remaining 1/4 cup pineapple juice and the chopped pork back to the skillet with the juices</li>
+    <li>Place the pork, pineapple and onion mixture in the tortillas. Top with the remaining onions, cilantro, cotija and salsa. Order a margarita, apply SPF 2 and take a bite</li>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box8" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>LINGUINE WITH WHITE CLAM SAUCE</h3>
+<p>INGREDIENTES</p>
+<ul>
+    <li>Extra-virgin olive oil</li>
+    <li>9 cloves garlic, smashed</li>
+    <li>5 dozen littleneck clams, scrubbed under cold running water</li>
+    <li>1 cup white wine</li>
+    <li>1/2 cup water</li>
+    <li>1 large pinch crushed red pepper flakes</li>
+    <li>1 pound linguine</li>
+    <li>2 tablespoons butter</li>
+    <li>2 tablespoons chopped Italian parsley leaves</li>
+    <li>2 tablespoons chopped oregano leaves</li>
+    <li>1 cup grated Parmigiano-Reggiano, optional, plus shavings for garnish</li>
+    <li>Kosher salt</li>
+    <li>Big fat finishing extra-virgin olive oil (high quality)</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+    <li>Coat a large saute pan with olive oil and add half the garlic cloves. Bring the pan to a medium- high heat and cook until the garlic becomes golden brown. When the garlic is golden brown and very aromatic, remove it and discard, it has fulfilled its garlic destiny. Put 3 1/2 dozen clams in the pan with the wine and 1/2 cup of water. Cover the pan and bring it to a boil over medium heat. Cover and cook until the clams open, about 10 minutes. Remove the clams from the pan and reduce the cooking liquid. Let the clams cool slightly, then remove them from the shells and reserve. Discard the shells. Pour the cooking liquid into a measuring cup.</li>
+    <li>Bring a large pot of well salted water to a boil over medium heat</li>
+    <li>Coat the same saute pan again with olive oil and add the remaining garlic cloves and a large pinch of crushed pepper flakes. Bring the pan to a medium-high heat and cook until the garlic becomes golden brown. When the garlic is golden brown and very aromatic, remove it and discard, it has fulfilled its garlic destiny. Add the remaining raw clams and reserved clam cooking liquid to the pan. When adding the reserved clam liquid, be sure to check for sand and grit in the bottom, you may lose the last couple of tablespoons of juice but that is better than sand in your pasta! Cover and cook until the clams open</li>
+    <li>While the clams are cooking, drop the linguine into the salted boiling water and cook until the pasta is very "al dente" maybe a minute or so less than the box directs</li>
+    <li>Remove the cooked clams in their shells from the pan and keep warm. Add the butter and cooked clams that have been removed from their shells back to the pan. Bring the liquid to a boil and toss in the cooked pasta and the herbs. Cook the pasta together with the sauce until the sauce clings to the pasta. Turn off the heat and toss in the grated Parmigiano-Reggiano, if using, and finish with a drizzle of big fat finishing oil. Toss or stir vigorously to combine.</li>
+    <li>Divide the pasta into serving dishes and garnish with the clams that are still in their shells and a little more shaved Parmigiano-Reggiano, if desired</li>
+</ol>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box9" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>TOSTADAS DE TINGA</h3>
+<p>INGREDINETES</p>
+<ul>
+    <li>1 large chicken breast</li>
+    <li>3 onions</li>
+    <li>3 garlic cloves diced</li>
+    <li>5 tomatos chopped</li>
+    <li>1 small can of chiptole</li>
+    <li>1 can of precooked beans</li>
+    <li>oil</li>
+    <li>12 tostadas</li> 
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+    <li>Boil the chicken for an hour or until fully cooked shreed it when done</li>
+    <li>Fry the onion with the oil until it is transparent. Add the garlic, fry for another 5 minutes and add four tomatoes</li>
+    <li>Blend the remaining tomato with the can of chipotles and incorporate the mixture to the sofrito</li>
+    <li>Boil on low heat for 20 minutes. Add chicken</li>
+    <li>Heat the beans and spread them on the tostada. Place the tinga on top of them.</li>
+    <li>Add lettuce and sour cream if you like with chesse</li>
+</ol>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box10" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>VEGGIE LASGANA</h3>
+<p>INGREDIENTES</p>
+<ul>
+    <li>olive oil cooking spray</li>
+    <li>2 zucchini, sliced</li>
+    <li>2 green bell peppers, cut in 1-inch pieces</li>
+    <li>1 (8 ounce) package sliced fresh mushrooms</li>
+    <li>1 onion, cut into 8 wedges</li>
+    <li>1 tablespoon chopped fresh basil</li>
+    <li>1 clove garlic, pressed</li>
+    <li>1/2 teaspoon salt</li>
+    <li>1/4 teaspoon ground black pepper</li>
+    <li>2 (28 ounce) jars pasta sauce</li>
+    <li>1 (16 ounce) package shredded mozzarella cheese</li>
+    <li>1 cup freshly shredded Parmesan cheese</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+    <li>Preheat oven to 400 degrees F (200 degrees C). Spray a large baking sheet with cooking spray</li>
+    <li>Arrange zucchini, bell peppers, mushrooms, and onion wedges on prepared baking sheet. Scatter basil and garlic over vegetables and spray with cooking spray. Season with salt and black pepper</li>
+    <li>Bake in preheated oven until vegetables are lightly browned and tender, 10 to 25 minutes</li>
+    <li>Bring a large pot of lightly salted water to a boil. Cook lasagna in the boiling water, stirring occasionally until cooked through but firm to the bite, about 8 minutes. Drain</li>
+    <li>Bring pasta sauce to a simmer in a saucepan over medium-high heat. Mix mozzarella cheese and Parmesan cheese in a bowl</li>
+    <li>Pour about 1/3 cup pasta sauce in a 9x13-inch baking dish. Layer 3 lasagna noodles over sauce. Spread about of 1/4 the roasted vegetables over noodles and top with about 1/4 the sauce. Sprinkle 1/4 of the mozzarella-Parmesan cheese mixture over the sauce. Repeat layers 3 more times, ending with the cheese</li>
+    <li>Bake in preheated oven until cheese is melted and sauce is bubbly, 20 to 25 minutes. Allow lasagna to rest for 10 minutes before slicing</li>
+</ol>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box11" class="popup_block">
+<h3>MAC AND CHESSE</h3>
+<p>INGREDIENTES</p>
+<ul>
+    <li>8 ounces uncooked elbow macaroni</li>
+    <li>2 cups shredded sharp Cheddar cheese</li>
+    <li>1/2 cup grated Parmesan cheese</li>
+    <li>3 cups milk</li>
+    <li>1/4 cup butter</li>
+    <li>2 1/2 tablespoons all-purpose flour</li>
+    <li>2 tablespoons butter</li>
+    <li>1/2 cup bread crumbs</li>
+    <li>1 pinch paprika</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+    <li>Cook macaroni according to the package directions. Drain</li>
+    <li>In a saucepan, melt butter or margarine over medium heat. Stir in enough flour to make a roux. Add milk to roux slowly, stirring constantly. Stir in cheeses, and cook over low heat until cheese is melted and the sauce is a little thick. Put macaroni in large casserole dish, and pour sauce over macaroni. Stir well</li>
+    <li>Melt butter or margarine in a skillet over medium heat. Add breadcrumbs and brown. Spread over the macaroni and cheese to cover. Sprinkle with a little paprika.</li>
+    <li>Bake at 350 degrees F (175 degrees C) for 30 minutes. Serve.</li>
+</ol>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box12" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>STUFFED PEPPERS</h3>
+<p>INGREDIENTES</p>
+<ul>
+    <li>1 pound ground beef</li>
+    <li>1/2 cup uncooked long grain white rice</li>
+    <li>1 cup water</li>
+    <li>6 green bell peppers</li>
+    <li>2 (8 ounce) cans tomato sauce</li>
+    <li>1 tablespoon Worcestershire sauce</li>
+    <li>1/4 teaspoon garlic powder</li>
+    <li>1/4 teaspoon onion powder</li>
+    <li>salt and pepper to taste</li>
+    <li>1 teaspoon Italian seasoning</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+    <li>Preheat oven to 350 degrees F (175 degrees C).</li>
+    <li>Place the rice and water in a saucepan, and bring to a boil. Reduce heat, cover, and cook 20 minutes. In a skillet over medium heat, cook the beef until evenly browned.</li>
+    <li>Remove and discard the tops, seeds, and membranes of the bell peppers. Arrange peppers in a baking dish with the hollowed sides facing upward. (Slice the bottoms of the peppers if necessary so that they will stand upright.)</li>
+    <li>In a bowl, mix the browned beef, cooked rice, 1 can tomato sauce, Worcestershire sauce, garlic powder, onion powder, salt, and pepper. Spoon an equal amount of the mixture into each hollowed pepper. Mix the remaining tomato sauce and Italian seasoning in a bowl, and pour over the stuffed peppers.</li>
+    <li>Bake 1 hour in the preheated oven, basting with sauce every 15 minutes, until the peppers are tender.</li>
+</ol>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+
+<div id="box1" class="popup_block">
+<h3>SIGN UP</h3>
+  <div id="space">
+   <form actions="" style="line-height: 120%;">
+        Firstname:
+        <input type="text" name="firstname">
+        <br>
+        <br>
+        Lastname:
+        <input type="text" name="Lastname">
+        <br>
+        <br>
+        </form>
+        <form actions="">
+        Email:
+        <input type="email" id="myEmail" value="xyz_123@example.com"> 
+        <br>
+        <br>
+        </form>
+        <form>    
+        D.O.B:
+        <input type="D.O.B" id="DOB" value="03/20/1942">
+        <br>
+        <br>
+        </form>
+        <form>
+        Password:
+        <input type="Password" id="mypsw" value="psw123">
+        <br>
+        <br>
+        </form>
+        <form>
+          Username:
+          <input type="Username" id="UN" value="example_123">
+        </form>
+        <form>
+        <br>
+        <br>
+        <input type="submit" name="submit" style="background-color: #f44e42; color: white">
+        </form>
+  </div>
+
+</div></div></div></div></div></div></div></div></div></div>
+</body>
+</html>

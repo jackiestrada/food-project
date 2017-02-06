@@ -1,0 +1,415 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Appetizers</title>
+	<link rel="stylesheet" type="text/css" href="css/appetizers.css">
+</head>
+
+
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+//
+$('a.poplight[href^=#]').click(function() {
+var popID = $(this).attr('rel'); //Get Popup Name
+var popURL = $(this).attr('href'); //Get Popup href to define size
+var query= popURL.split('?');
+var dim= query[1].split('&');
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2;
+var popMargLeft = ($('#' + popID).width() + 80) / 2;
+//Apply Margin to Popup
+$('#' + popID).css({
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft
+});
+$('body').append('<div id="fade"></div>');
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+return false;
+});
+$('a.close, #fade').live('click', function() {
+$('#fade , .popup_block').fadeOut(function() {
+$('#fade, a.close').remove(); //fade them both out
+});
+return false;
+});
+});
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+<header>For the love of food</header>
+	<div id="nav">
+  			<ul id="topnav">
+    			<li><a href="file:///Users/istudent/Desktop/Jackie%20&%20Ambra%20HOW%20TO./index.html">HOME</a></li>
+    			<li><a href="file:///Users/istudent/Desktop/Jackie%20&%20Ambra%20HOW%20TO./appetizers.html">APPETIZER</a></li>
+    			<li><a href="file:///Users/istudent/Desktop/Jackie%20&%20Ambra%20HOW%20TO./entree.html">ENTREE</a></li>
+    			<li><a href="file:///Users/istudent/Desktop/Jackie%20&%20Ambra%20HOW%20TO./Dessert.html">DESSERT</a></li>
+    			<li><a href="#?w=300" rel="box6" class="poplight">SIGN UP</a></li>
+    			<li><a href="">CONTEST</a></li>
+   			</ul>
+	</div>
+
+	<div id="h1">
+		<h1>Appetizers</h1>
+	</div>
+
+	<div id="gallery">
+		
+		<a href="#?w=300" rel="box1" class="poplight"><img src="http://www.kraftrecipes.com/-/media/assets/recipe_images/bacon-water-chestnuts-50888-640x428.jpg?h=428&w=640&la=en&hash=99C6DD0A1CE74849133C98CF6D503DB82F9EF742"></a>
+		<a href="#?w=300" rel="box2" class="poplight"><img src="http://www.rickbayless.com/wp-content/uploads/2014/02/ChipsAndGuac.jpg"></a>
+		<a href="#?w=300" rel="box3" class="poplight"><img src="https://s-media-cache-ak0.pinimg.com/originals/6b/94/e2/6b94e27ea7e5e1f8ead4d97f363aa77c.jpg"></a>
+		<a href="#?w=300" rel="box4" class="poplight"><img src="https://s-media-cache-ak0.pinimg.com/236x/f6/3d/43/f63d438b8f9ee92de52865405c91a782.jpg"></a>
+
+	</div>
+
+	<div id="gallery2">
+		
+		<a href="#?w=300" rel="box7" class="poplight"><img src="http://68.media.tumblr.com/fe715f7182b9017ce52a583585cfc049/tumblr_oiwlakxvBq1r83d7lo3_540.jpg"></a>
+		<a href="#?w=300" rel="box8" class="poplight"><img src="http://68.media.tumblr.com/3c28b841feebf375d1dda83f3f68f780/tumblr_oiwlakxvBq1r83d7lo5_540.jpg"></a>
+		<a href="#?w=300" rel="box9" class="poplight"><img src="http://www.askchefdennis.com/wp-content/uploads/2011/02/buffalo-wings-102-680x382.jpg"></a>
+		<a href="#?w=300" rel="box10" class="poplight"><img src="http://www.iwashyoudry.com/wp-content/uploads/2015/05/Shrimp-Ceviche-Tostada-3.jpg"></a>
+
+	</div>
+
+
+	<div id="gallery3">
+			
+			<a href="#?w=300" rel="box11" class="poplight"><img src="http://cook-wise.com/wp-content/uploads/parser/appetizers-4.jpg"></a>
+			<a href="#?w=300" rel="box12" class="poplight"><img src="http://skinnykitchen.com/wp-content/uploads/2010/11/italian-chopped-appetizer-photo-300x225.jpg">
+			<a href="#?w=300" rel="box13" class="poplight"><img src="https://s-media-cache-ak0.pinimg.com/736x/7f/06/f4/7f06f471e89edd92c5aa4814eeacb16a.jpg"></a>
+			<a href="#?w=300" rel="box14" class="poplight"><img src="http://myfridgefood.com/media/6570/creole-fried-shrimp-005.jpg"></a>
+
+	</div>
+
+
+<div id="box1" class="popup_block">
+<h3>BACON WRAPPED TATER TOTS</h3>
+ <p>INGREDIENTS</p>
+ <ul>
+ <li>1 pack of bacon</li>
+ <li>pack of frozen tater tots</1i>
+ <li>1 box of tooth picks</li>
+ </ul>
+ <p id="p2">STEPS</p>
+ <ol>
+ 	<li> Preheat an oven to 450 degrees F (230 degrees C). Line a baking sheet with parchment paper.</li>
+ 	<li>Lay each slice of bacon onto a work surface and place a potato nugget in the center of each bacon slice. Cut a slit down the center of each potato nugget and place a Cheddar cheese piece into the slit. Top each nugget with a dash of hot sauce. Wrap bacon around each filled potato nugget and secure the bacon to the nugget with a toothpick. Transfer the wrapped nuggets to the prepared baking sheet.</li>
+ 	<li>Bake in the preheated oven until nuggets are cooked through and bacon is crispy, 15 to 20 minutes.</li>
+ 	<li>ENJOY!!!!</li>
+ </ol>
+</div>
+
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box2" class="popup_block">
+<h3>SPICY GUCAMOLE AND CHIPS</h3>
+<p>INGREDIENTS</p>
+<ul>
+ <li>4 Avacados</li>
+ <li>1/2 red onion, thinly sliced</1i>
+ <li>1 jalapeno, finely diced</li>
+ <li>1/2 bunch fresh cilantro, coarsely chopped</li>
+ <li>Juice of 1 lime</li>
+ <li>Kosher salt and freshly ground black pepper</li>
+ <p id="p2">STEPS</p>
+ <ol>
+ 	<li>Mash the avocados with a fork and combine with the red onion, jalapeno, cilantro, lime juice, salt and pepper.</li>
+ 	<li>Put on a plate</li>
+ 	<li>Add chips to the side</li>
+ </ol>
+</div>
+
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box3" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>MINI BLUEBERRY / HONEY PANCAKES</h3>
+<p>INGREDIENTS</p>
+<ul>
+<li>3/4 cup milk</li>
+<li>2 tablespoons white vinegar</li>
+<li>1 cup all-purpose flour</li>
+<li>2 tablespoons white sugar</li>
+<li>1 teaspoon baking powder</li>
+<li>1/2 teaspoon baking soda</li>
+<li>1/2 teaspoon salt</li>
+<li>1 egg</li>
+<li>2 tablespoons melted butter</li>
+<li>cooking spray</li>
+
+ <p id="p2">STEPS</p>
+ <ol>
+ <li> Combine milk and vinegar in a medium-sized bowl and let it sit for 5 minutes.  In the meantime, combine your flour, sugar, baking powder, baking soda, and salt in a mixing bowl.</li>
+
+<li>Next, whisk the egg and the butter into the milk/vinegar mixture. Then whisk in the flower until you've got a smooth batter.  It's also imperative that you dance while whisking, the gyration helps loosen the clumps (and you're mood).</li>
+
+<li>Heat a large skillet on medium and coat it with cooking spray (you can also use butter if you prefer or a non-stick skillet.  Remember, cooking spray is NOT for use non-stick pots and pans). You can also use an electric griddle if you'd like to finally put to use the one you got as a wedding gift six months ago but haven't even taken out of the box yet.</li>
+
+<li>When your griddle or skillet is hot, pour just enough batter onto the griddle to form a pancake that is approximately two inches across - this small amount should make the perfect stackable mini pancake for easy "skewering."  Cook until you see bubbles on the surface, then flip with a spatula and cook the other side until brown.</li>
+
+<li>Stack pancakes to desired height. For safety reasons, we recommend nothing taller than four stories. Stab your pancakes with your desired skewer,</li>
+</ol>
+
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box4" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>PEPINOS A LA CHAMUY</h3>
+<p>INGREDIENTS</p>
+<ul>
+	<li>2 cups Japanese peanut</li>
+	<li>4 green cucumbers</li>
+	<li>1/2 cup tomato and clam cocktail</li>
+	<li>1/2 cup tomato and clam cocktail</li>
+	<li>2/3 cup of chamoy</li>
+	<li>1/3 cup hot sauce or botanera</li>
+	<li>6 lemons</li>
+	<li>salt to taste</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+	<li>Peel the cucumbers, split them into 3 pieces, take out the seed and always leave the bottom a little to make it cover.</li>
+	<li>In a bowl add, peanuts, cocktail, sauces, chamoy, chili powder and lemons juice, mix everything very well and add salt to taste</li>
+	<li>In a flat dish stand the cucumbers in the form of basket, and fill them with the mixture, and sprinkle with a little of chile powder.</li>
+	<li>ENJOY !</li>
+</ol>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box7" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>Deep fried mac and chesse balls</h3>
+<p>INGREDIENTS</p>
+<ul>
+ <li>1 (7.25 ounce) package macaroni and cheese mix</li>
+ <li>2 tablespoons butter</1i>
+ <li>1/4 cup milk</li>
+ <li>1 cup shredded Cheddar cheese</li>
+ <li>3/4 cup pimento cheese spread</li>
+ <li>1 cup shredded Italian cheese blend</li>
+ <li>2 cups Italian seasoned bread crumbs</li>
+ <li>1/2 teaspoon paprika</li>
+ <li>1/2 teaspoon chili powder</li>
+ <li>1/4 teaspoon salt</li>
+ <li>1 pinch cayenne pepper, or to taste</li>
+ <li>4 eggs</li>
+<li>3 tablespoons milk</li>
+<li>4 cups peanut oil for frying, or as needed</li>
+<p id="p2">STEPS</p>
+<ol>
+    <li>Fill a pot with lightly salted water and bring to a rolling boil over high heat. Stir in the macaroni, and return to a boil. Cook, uncovered, stirring occasionally, until the macaroni is cooked through but still firm to the bite, about 7 minutes. Drain. Stir in the 2 tablespoons butter, the 1/4 cup milk, and the cheese packet from the package.</li>
+    <li>While the macaroni is still hot, stir in the Cheddar cheese, pimento cheese spread, and Italian cheese blend, and continue to stir until melted. Place the macaroni and cheese mixture in a container and refrigerate until firm, about 4 hours.</li>
+    <li>Line a baking sheet with parchment paper. Remove the macaroni mixture from the refrigerator, and, using a cookie scoop, scoop into balls. Place mac balls on the prepared baking sheet and freeze for at least 2 hours.</li>
+    <li>Heat oil in a deep fryer or large saucepan to 350 degrees F (175 degrees C).</li>
+    <li>Whisk the bread crumbs with the paprika, chili powder, black pepper, sugar, and cayenne in a shallow dish; set aside. Beat the eggs with the 3 tablespoons milk in a small bowl. Remove the mac balls from the freezer, coat in the egg wash, and then dredge in breading.</li>
+    <li>Fry the mac balls in small batches until golden brown, 3 to 5 minutes. Drain briefly on a paper towel-lined plate; serve hot.</li>
+</ol>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box8" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>GARLIC KNOTS</h3>
+<p>INGREDIENTS</p>
+<ul>
+    <li>Basic Pizza Dough</li>
+    <li>1/2 cup unsalted butter</li>
+    <li>3 tablespoons minced garlic</li>
+    <li>1 tablespoon olive oil</li>
+    <li>1 teaspoon coarse sea salt</li>
+    <li>1/4 cup grated Pecorino Romano cheese</li>
+    <li>2 tablespoons chopped fresh parsley</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+    <li>Prepare Basic Pizza Dough as recipe instructs below and set aside to rise</li>
+    <li>Combine butter and garlic in a small saucepan over low heat. Cook until the garlic is fragrant and tender, 3 to 4 minutes. Cover, remove from the heat and set aside. Keep warm.</li>
+    <li>Preheat oven to 375 degrees F and lightly grease 2 large baking sheets. Set aside.</li>
+    <li>Remove risen dough from the bowl and place on a lightly floured surface. Using a lightly floured rolling pin, roll dough out into a large rectangle, about 16 by 12 inches. Brush the dough lightly with the olive oil. Cut the dough in half lengthwise and then cut crosswise into strips about 1 1/4 inches wide. Tie each strip loosely into a knot, stretching gently if necessary, and place on prepared baking sheets about 2-inches apart. Sprinkle the tops of the knots with salt. Cover with plastic wrap or a clean kitchen towel and let rise in a warm, draft-free place for about 30 minutes.</li>
+    <li>Bake until golden brown and risen, about 20 minutes. Transfer to a large mixing bowl and toss gently with the warm garlic butter, Pecorino Romano cheese, and parsley. Add salt to taste if necessary</li>
+</ol>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box9" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>BUFFALO WINGS</h3>
+<p>INGREDIENTS</p>
+    <ul>
+        <li>1 1/2 cups (12 ounces) mild to medium hot sauce</li>
+        <li>1/2 cup buttermilk</li>
+        <li>1/2 teaspoon garlic powder</li>
+        <li>3 pounds chicken wings, separated into 2 pieces and wing tips discarded</li>
+        <li>4 tablespoons unsalted butter (1/2 stick), melted</li>
+    </ul>
+<p id="p2">STEPS</p>
+<ol>
+    <li>Place 1 cup of the hot sauce, the buttermilk, and the garlic powder in a large resealable plastic bag and stir to combine. Add the wings; seal the bag, pressing out any excess air; and turn the bag to coat the wings evenly. Let marinate in the refrigerator, turning occasionally, for at least 2 hours or up to 12 hours</li>
+    <li>Heat the broiler to high and arrange a rack in the middle of the oven. Cover a baking sheet with aluminum foil and place a wire rack on it</li>
+    <li>Remove the wings from the marinade, letting any excess drip off, and arrange in a single layer on the rack. (If possible, don’t allow the wings to touch.) Discard the marinade and broil the wings until the meat starts to pull away from the bones and the skin is deep golden brown, bubbling, and crisped, about 12 minutes. Remove from the oven and turn the wings over using tongs. Return wings to the oven and continue broiling until the skin is deep golden brown, bubbling, and crisped on the second side, about 12 minutes more</li>
+    <li>Meanwhile, combine remaining 1/2 cup hot sauce and melted butter in a large bowl and set aside. Add cooked wings and toss to coat. Serve immediately with blue cheese dressing and celery sticks, if using.</li>
+</ol>
+
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box10" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>TOSTADAS DE CEVICHE</h3>
+<p>INGREDIENTS</p>
+    <ul>
+        <li>2 pounds of Shrimp nicely diced</li>
+        <li>1 cup lime juice</li>
+        <li>1/2 cup seeded chopped tomato</li>
+        <li>1/2 cucumber, peeled, seeded and finely diced</li>
+        <li>1/2 cup finely chopped onion</li>
+        <li>1/4 cup chopped fresh cilantro leaves</li>
+        <li>Salt and freshly ground black pepper</li>
+        <li>One pack of tortillas</li>
+    </ul>
+<p id="p2">STEPS</p>
+    <ol>
+        <li>put the shrimp in a medium bowl. Pour the lime juice over the fish and mix gently to combine. Cover with plastic wrap and chill in the refrigerator until the shrimp is red throughout, about 15 to 20 minutes</li>
+        <li>Remove from the refrigerator and drain off the lime juice, gently squeezing the shrimp with your hands. Discard the lime juice. Add the tomato, cucumber, onion, and cilantro. Season with salt and pepper, to taste.</li>
+        <li>Spread the tostadas generously with mayonnaise and top with the ceviche. Arrange the avocado slices on top of the ceviche and serve immediately with the lime wedges alongside</li>
+        <li>Heat a grill or grill pan over medium heat</li>
+        <li>Put the tortillas on the grill or grill pan, and let them dry out until they are crunchy. Purchased tostadas can be substituted</li>
+    </ol>
+
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box11" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>MOZZARELLA STICKS</h3>
+<p>INGREDIENTS</p>
+<ul>
+    <li>2 eggs, beaten</li>
+    <li>1/4 cup water</li>
+    <li>1 1/2 cups Italian seasoned bread crumbs</li>
+    <li>1/2 teaspoon garlic salt</li>
+    <li>2/3 cup all-purpose flour</li>
+    <li>1/3 cup cornstarch</li>
+    <li>1 quart oil for deep frying</li>
+    <li>1 (16 ounce) package mozzarella cheese sticks</li>
+</ul>
+<p id="p2">STEPS</p>
+<ol>
+    <li>In a small bowl, mix the eggs and water.</li>
+    <li>Mix the bread crumbs and garlic salt in a medium bowl. In a medium bowl, blend the flour and cornstarch.</li>
+    <li>In a large heavy saucepan, heat the oil to 365 degrees F (185 degrees C).</li>
+    <li>One at a time, coat each mozzarella stick in the flour mixture, then the egg mixture, then in the bread crumbs and finally into the oil. Fry until golden brown, about 30 seconds. Remove from heat and drain on paper towels.</li>
+</ol>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+
+<div id="box12" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>ITALIAN CHOPPED SALAD STUFFED SHELLS</h3>
+<p>INGREDIENTS</p>
+<ul>
+    <li>1/2 cup Cardini's Light Caesar Vinaigrette Dressing or Girard’s Light Caesar Dressing, refrigerated</li>
+    <li>24 jumbo pasta shells (8 ounces)</li>
+    <li>1 bag romaine lettuce, chopped into small pieces</li>
+    <li>1 1/4 cups cherry or grape tomatoes, cut in fours</li>
+    <li>1 cup cucumbers, peeled and chopped</li>
+    <li>2/3 cup reduced-fat salami, chopped</li>
+    <li>2/3 cup (about 20) Kalamata olives, pitted and sliced into pieces</li>
+    <li>1/2 cup garbanzo beans, rinsed and drained</li>
+    <li>1/4cup fresh grated Parmesan cheese</li>
+<p id="p2">STEPS</p>
+<ol>
+    <li>Cook shells according to package directions (al dente). Rinse in cold water</li>
+    <li>In a large bowl, add all salad ingredients</li>
+    <li>Start with 1/2 cup dressing and toss lightly.  Stuff each cooked shell</li>
+</ol>
+</ul>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box13" class="popup_block">
+<h3>FETA, CUCUMBER, AND HEIRLOOM TOMATO BITES</h3>
+<p>INGREDIENTS</p>
+<ul>
+    <li>Watermelon any size you like ( nicely dice the watermelon )</li>
+    <li>Cucumber ( nicley diced )</li>
+    <li>Feta chesse (nicely diced)</li>
+    <li>koob sticks</li>
+</ul>
+<p id="p2">STEPS</p>
+    <ol>
+        <li>Grave a koob stick</li>
+        <li>stick a peace of cucmcber throught the stick</li>
+        <li> stick a peace of feta chesse through the stick</li>
+        <li>stick a peace of tomato through the stick</li>
+        <li>ENJOY</li>
+    </ol>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+<div id="box14" class="popup_block" style="overflow: scroll; height: 500px;">
+<h3>FRIED SHRIMP</h3>
+<p>INGREDIENTS</p>
+<ul>
+    <li>1 pound uncooked jumbo shrimp, peeled and deveined, tails left intact</li>
+    <li>1/3 cup flour</li>
+    <li>3/4 teaspoon salt</li>
+    <li>1/2 teaspoon black pepper</li>
+    <li>3 large eggs</li>
+    <li>1 1/2 cups Kikkoman Panko Bread Crumbs</li>
+    <li>Vegetable oil (for deep frying)</li>
+</ul>
+<p id="p2">STEPS</p>
+    <ol>
+        <li>Beat eggs in a medium bowl until frothy. Mix flour, salt and pepper in another medium bowl. Dredge shrimp in flour, shake off excess. Dip shrimp into eggs, then press shrimp into Panko; turn shrimp over and press into Panko again to coat both sides.</li>
+        <li>Pour enough oil into heavy large pot to reach depth of 2 inches; heat to 350 degrees F. Working in batches, add shrimp to hot oil; deep-fry until cooked through, about 1 minute. Using tongs transfer shrimp to paper towels to drain. Arrange shrimp on platter. If desired, serve with Kikkoman Tonkatsu Sauce for dipping.</li>
+    </ol>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+
+
+<div id="box6" class="popup_block">
+<h3>SIGN UP</h3>
+  <div id="space">
+   <form actions="" style="line-height: 120%;">
+        Firstname:
+        <input type="text" name="firstname">
+        <br>
+        <br>
+        Lastname:
+        <input type="text" name="Lastname">
+        <br>
+        <br>
+        </form>
+        <form actions="">
+        Email:
+        <input type="email" id="myEmail" value="xyz_123@example.com"> 
+        <br>
+        <br>
+        </form>
+        <form>    
+        D.O.B:
+        <input type="D.O.B" id="DOB" value="03/20/1942">
+        <br>
+        <br>
+        </form>
+        <form>
+        Password:
+        <input type="Password" id="mypsw" value="psw123">
+        <br>
+        <br>
+        </form>
+        <form>
+          Username:
+          <input type="Username" id="UN" value="example_123">
+        </form>
+        <form>
+        <br>
+        <br>
+        <input type="submit" name="submit" style="background-color: #f44e42; color: white">
+        </form>
+  </div>
+
+</div></div></div></div></div></div></div></div></div></div>
+
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How To</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+//
+$('a.poplight[href^=#]').click(function() {
+var popID = $(this).attr('rel'); //Get Popup Name
+var popURL = $(this).attr('href'); //Get Popup href to define size
+var query= popURL.split('?');
+var dim= query[1].split('&');
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2;
+var popMargLeft = ($('#' + popID).width() + 80) / 2;
+//Apply Margin to Popup
+$('#' + popID).css({
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft
+});
+$('body').append('<div id="fade"></div>');
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+return false;
+});
+$('a.close, #fade').live('click', function() {
+$('#fade , .popup_block').fadeOut(function() {
+$('#fade, a.close').remove(); //fade them both out
+});
+return false;
+});
+});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+	<header>For the love of food</header>
+	<div id="nav">
+  			<ul id="topnav">
+    			<li><a href="file:///Users/istudent/Desktop/Jackie%20&%20Ambra%20HOW%20TO./index.html">HOME</a></li>
+    			<li><a href="file:///Users/istudent/Desktop/Jackie%20&%20Ambra%20HOW%20TO./appetizers.html">APPETIZER</a></li>
+    			<li><a href="file:///Users/istudent/Desktop/Jackie%20&%20Ambra%20HOW%20TO./entree.html">ENTREE</a></li>
+    			<li><a href="file:///Users/istudent/Desktop/Jackie%20&%20Ambra%20HOW%20TO./Dessert.html">DESSERT</a></li>
+    			<li><a href="#?w=300" rel="box1" class="poplight">SIGN UP</a></li>
+    			<li><a href="">CONTEST</a></li>
+   			</ul>
+	</div>
+
+<div id="description"><description style="overflow:scroll;">
+
+<p>Bacon ipsum dolor amet shankle filet mignon fatback spare ribs chuck salami. Brisket boudin ham hock beef pancetta shoulder fatback pork chop ribeye. Shankle jerky shoulder drumstick landjaeger. Porchetta leberkas tri-tip, chuck ham hock sirloin corned beef pork belly beef meatball sausage tail.</p>
+
+<p>Pork belly short ribs porchetta shankle meatloaf turkey flank filet mignon cow short loin leberkas sirloin beef ground round. Ground round rump pork chop corned beef, chuck biltong filet mignon. Andouille bresaola pastrami ribeye. Ground round hamburger short ribs ball tip jerky, meatloaf swine.</p>
+
+<p>Ball tip jerky pork chop strip steak. Pancetta burgdoggen bacon salami, strip steak leberkas jowl swine ball tip beef ribs. Capicola frankfurter bacon, biltong andouille shank jerky ground round. Ham hock tenderloin rump capicola, boudin fatback alcatra cow bresaola short ribs prosciutto tail. Prosciutto leberkas cow spare ribs alcatra capicola bresaola tenderloin kielbasa pastrami filet mignon burgdoggen cupim ground round. Flank cow picanha chicken. Salami strip steak beef ribs chicken jowl, spare ribs cow beef venison doner alcatra.</p>
+
+<p>Flank boudin porchetta spare ribs. Meatball prosciutto capicola spare ribs, pork belly burgdoggen kielbasa beef ribs ground round drumstick meatloaf sausage. Prosciutto swine filet mignon, pork alcatra corned beef ball tip flank short ribs doner. Burgdoggen picanha boudin, andouille alcatra kielbasa ball tip. Biltong ground round swine cow shank pastrami turducken chuck chicken andouille pork loin.</p>
+
+<p>Andouille alcatra chicken turkey boudin t-bone pig rump turducken leberkas doner kevin. T-bone sausage shankle, strip steak ham hock pork chop beef ribs bresaola. Ham chuck meatball, venison pork loin ball tip alcatra doner kielbasa. Short loin ground round short ribs beef ribs pork chop prosciutto bacon. T-bone pork belly tenderloin ham hock alcatra porchetta pig bresaola meatball pork loin.</p></description></div>
+
+<div id="video">
+   <iframe width="530" height="200" src="https://www.youtube.com/embed/8StecQyB0R4" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div id="mainbody"> 
+
+
+
+   <div id="banner">
+        <div id="h1">
+            <h1>RESULTS</h1>
+        </div>
+        <div class="slide">
+            <img class="mySlides" src="http://www.rickbayless.com/wp-content/uploads/2014/02/ChipsAndGuac.jpg">
+            <img class="mySlides" src="http://www.kraftrecipes.com/-/media/assets/recipe_images/bacon-water-chestnuts-50888-640x428.jpg?h=428&w=640&la=en&hash=99C6DD0A1CE74849133C98CF6D503DB82F9EF742">
+            <img class="mySlides" src="http://cf.createdby-diane.com/wp-content/uploads/2012/02/Baked-Ziti1-530x353.jpg">
+            <img class="mySlides" src="http://www.thatsquareplate.com/wp-content/uploads/2015/12/Enchiladas-Verdes-5.jpg">
+            <img class="mySlides" src="https://ourfamilyfoodadventures.files.wordpress.com/2012/01/img_7972.jpg">
+            <img class="mySlides" src="https://static.pexels.com/photos/8382/pexels-photo.jpg">
+            <img class="mySlides" src="https://i.ytimg.com/vi/UXM4jjiMqAw/maxresdefault.jpg">
+        </div>
+
+    </div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="fjords.jpg">
+    <img a href=""src="http://www.kraftrecipes.com/-/media/assets/recipe_images/bacon-water-chestnuts-50888-640x428.jpg?h=428&w=640&la=en&hash=99C6DD0A1CE74849133C98CF6D503DB82F9EF742" alt="Fjords" width="300" height="300">
+  </a>
+  <div class="desc">Bacon wrapped tater tots</div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="forest.jpg">
+    <img src="http://assets.bonappetit.com/photos/57ae45a253e63daf11a4e4a9/master/w_1200,c_limit/squash-and-broccoli-rabe-lasagna.jpg" alt="Forest" width="300" height="300">
+  </a>
+  <div class="desc">Veggie lasagna</div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="lights.jpg">
+    <img src="http://farm5.static.flickr.com/4145/5212948215_dc0ccb2fab.jpg" alt="Northern Lights" width="300" height="300">
+  </a>
+  <div class="desc">Triple Chocolate Cheesecake</div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="forest.jpg">
+    <img src="http://3.bp.blogspot.com/-ssT57S8Hl6I/TzplOE9TUzI/AAAAAAAACk0/czl4c08cYbg/s1600/IMG_0876.JPG" alt="Forest" width="300" height="300">
+  </a>
+  <div class="desc">Chocolate covered Strawberry MilkShake</div>
+</div>
+<footer align="center">
+    <div id="paragraphs">
+        <ul>
+            <li>Location: 1000 Coney Island</li>
+            <li>Facebook/Instagram/Twitter: ForTheLoveofFood</li>
+            <li>Contact: Jacquline 718-888-0000  estradajacqueline12@gmail.com</li>
+        </ul>
+    </div>
+</footer>
+<div id="box1" class="popup_block">
+<h3>SIGN UP</h3>
+  <div id="space">
+   <form actions="" style="line-height: 120%;">
+        Firstname:
+        <input type="text" name="firstname">
+        <br>
+        <br>
+        Lastname:
+        <input type="text" name="Lastname">
+        <br>
+        <br>
+        </form>
+        <form actions="">
+        Email:
+        <input type="email" id="myEmail" value="xyz_123@example.com"> 
+        <br>
+        <br>
+        </form>
+        <form>    
+        D.O.B:
+        <input type="D.O.B" id="DOB" value="03/20/1942">
+        <br>
+        <br>
+        </form>
+        <form>
+        Password:
+        <input type="Password" id="mypsw" value="psw123">
+        <br>
+        <br>
+        </form>
+        <form>
+          Username:
+          <input type="Username" id="UN" value="example_123">
+        </form>
+        <form>
+        <br>
+        <br>
+        <input type="submit" name="submit" style="background-color: #f44e42; color: white">
+        </form>
+  </div>
+
+</div></div></div></div></div></div></div></div></div></div>
+
+
+
+</body>
+</html>
+
+<script>
+    var myIndex = 0;
+        carousel();
+
+    function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2350); // Change image every 14 seconds
+    }
+</script>
+
+
+
